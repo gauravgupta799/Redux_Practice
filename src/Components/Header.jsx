@@ -18,15 +18,28 @@ const classes = {
     Image:{
         height:"50px",
         width:"50px",
-        borderRadius:"50%"
+        borderRadius:"50%",
+    },
+    Span:{
+        position: "absolute",
+        top: "5px",
+        fontSize: "18px",
+        backgroundColor: "red",
+        borderRadius: "50%",
+        height: "27px",
+        width: "27px",
+        textAlign: "center",
+        fontWeight: "600",
+        right: "15px",
     }
    
 }
-const Header = () => {
+const Header = (props) => {
     return (
         <div style = {classes.header}>
              <h2>Redux APP</h2>
              <div style={classes.ImageWrapper}>
+              <span style={classes.Span}>{props.cardData.length}</span>
                <img src={url} alt="addtocart" style={classes.Image}/>
              </div>
         </div>

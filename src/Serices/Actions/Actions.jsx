@@ -1,8 +1,9 @@
-import {ADDTOCART} from "../constants";
+import {ADD_TO_CART} from "../constants";
 
 export const addToCart = (data) =>{
+    console.log("action", data);
     return {
-        type:ADDTOCART,
-        data
+        type:ADD_TO_CART,
+        data:data
     }
 }

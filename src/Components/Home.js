@@ -35,7 +35,7 @@ const classes = {
 };
 
 const Home = (props) => {
-	// console.log("Home", props);
+	// console.log("Home", props.cardData);
 	return (
 		<div style={classes.hoemeWrapper}>
 			{Products.map((product) => {
@@ -54,7 +54,7 @@ const Home = (props) => {
 							<h3>$ {price}</h3>                     
                              <button 
 							 style={classes.Button}
-							 onClick={()=>props.addToCartHandler(name, price)}
+							 onClick={()=>props.addToCartHandler(name)}
 							 >
 							 ADD TO CART
 							 </button>                        
